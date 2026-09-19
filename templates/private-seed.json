@@ -1,0 +1,22 @@
+{
+  "people": [
+    {
+      "seed_id": "replace-adult-key",
+      "display_name": "Invented Adult",
+      "living": true,
+      "familysearch_id": null
+    },
+    {
+      "seed_id": "replace-child-key",
+      "display_name": "Invented Child",
+      "living": true,
+      "familysearch_id": null
+    }
+  ],
+  "relationships": [
+    {
+      "parent": "replace-adult-key",
+      "child": "replace-child-key"
+    }
+  ]
+}

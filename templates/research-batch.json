@@ -1,0 +1,271 @@
+{
+  "format_version": 1,
+  "batch_id": "larkhaven-workshop-demo-v1",
+  "people": [
+    {
+      "key": "ari-1830",
+      "display_name": "Ari Fable (born 1830)",
+      "name_confidence": "accepted_working",
+      "name_rationale": "Invented teaching identity; no claim about a real person.",
+      "deceased": true,
+      "familysearch_id": null,
+      "source_key": "register"
+    },
+    {
+      "key": "ari-1846",
+      "display_name": "Ari Fable (born 1846)",
+      "name_confidence": "accepted_working",
+      "name_rationale": "Invented teaching identity; no claim about a real person.",
+      "deceased": true,
+      "familysearch_id": null,
+      "source_key": "register"
+    },
+    {
+      "key": "mira",
+      "display_name": "Mira Fable",
+      "name_confidence": "accepted_working",
+      "name_rationale": "Invented teaching identity; no claim about a real person.",
+      "deceased": true,
+      "familysearch_id": null,
+      "source_key": "register"
+    },
+    {
+      "key": "oren",
+      "display_name": "Oren Quill",
+      "name_confidence": "accepted_working",
+      "name_rationale": "Invented teaching identity; no claim about a real person.",
+      "deceased": true,
+      "familysearch_id": null,
+      "source_key": "register"
+    }
+  ],
+  "sources": [
+    {
+      "key": "register",
+      "source_type": "teaching_mock",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "collection_name": "Invented training collection",
+      "record_title": "MOCK: workshop register, spring 1847",
+      "jurisdiction": "Mistvale, Fictional Republic",
+      "volume": "C",
+      "page": "24",
+      "url": null,
+      "accessed_at": "2037-04-09",
+      "evidence_tier": "original_record",
+      "citation_text": "MOCK: workshop register, spring 1847 (wholly invented teaching document), C:24.",
+      "file": null
+    },
+    {
+      "key": "index",
+      "source_type": "teaching_mock",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "collection_name": "Invented training collection",
+      "record_title": "MOCK: later alphabetical index",
+      "jurisdiction": "Mistvale, Fictional Republic",
+      "volume": "C",
+      "page": "24",
+      "url": null,
+      "accessed_at": "2037-04-09",
+      "evidence_tier": "derivative_record",
+      "citation_text": "MOCK: later alphabetical index (wholly invented teaching document), C:24.",
+      "file": null
+    },
+    {
+      "key": "story",
+      "source_type": "teaching_mock",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "collection_name": "Invented training collection",
+      "record_title": "MOCK: community recollection",
+      "jurisdiction": "Mistvale, Fictional Republic",
+      "volume": "C",
+      "page": "24",
+      "url": null,
+      "accessed_at": "2037-04-09",
+      "evidence_tier": "authored_narrative",
+      "citation_text": "MOCK: community recollection (wholly invented teaching document), C:24.",
+      "file": null
+    }
+  ],
+  "assertions": [
+    {
+      "key": "birth-ari",
+      "person_key": "ari-1830",
+      "source_key": "register",
+      "predicate": "event.birth",
+      "value_text": "1830, year only",
+      "raw_value": "1830",
+      "parsed_value": {
+        "modifier": "exact",
+        "start": {
+          "year": 1830,
+          "month": null,
+          "day": null
+        },
+        "end": null
+      },
+      "confidence": "accepted_working",
+      "rationale": "Year is explicit in the invented entry; month and day remain unknown."
+    },
+    {
+      "key": "occupation-ari",
+      "person_key": "ari-1830",
+      "source_key": "story",
+      "predicate": "event.occupation",
+      "value_text": "Possibly a paper-maker",
+      "raw_value": "a paper-maker, perhaps",
+      "parsed_value": null,
+      "confidence": "plausible_lead",
+      "rationale": "An invented later recollection supplies an uncertain lead, not established occupation."
+    }
+  ],
+  "relationships": [
+    {
+      "key": "mira-parent",
+      "parent_key": "mira",
+      "child_key": "ari-1830",
+      "role": "mother",
+      "source_key": "register",
+      "confidence": "accepted_working",
+      "rationale": "The invented register explicitly names Mira as mother; this remains a working example."
+    },
+    {
+      "key": "oren-parent",
+      "parent_key": "oren",
+      "child_key": "ari-1830",
+      "role": "father",
+      "source_key": "index",
+      "confidence": "quarantined_contradiction",
+      "rationale": "The invented dates would make Oren six at the birth. Retain the copied claim for review; do not use it in the working lineage."
+    }
+  ],
+  "question": {
+    "title": "Which Ari Fable appears in the Larkhaven workshop register?",
+    "status": "in_progress",
+    "summary": "The older Ari fits the register age and named mother. The later index conflates two people; inspect the facing page before treating the identification as settled.",
+    "target_person_keys": [
+      "ari-1830",
+      "ari-1846"
+    ],
+    "line_anchor": [
+      {
+        "person_key": "ari-1830",
+        "basis": "Invented workshop register",
+        "confidence": "accepted_working",
+        "note": "Identity is provisional; exact matching never merges people by name alone."
+      }
+    ],
+    "timeline": [
+      {
+        "date_text": "1830",
+        "place_text": "Larkhaven (invented)",
+        "event_text": "Older Ari reportedly born; year only.",
+        "source_keys": [
+          "register"
+        ]
+      },
+      {
+        "date_text": "April to May 1847",
+        "place_text": "Larkhaven (invented)",
+        "event_text": "Workshop admits an apprentice named Ari Fable, aged seventeen.",
+        "source_keys": [
+          "register"
+        ]
+      },
+      {
+        "date_text": "1892",
+        "place_text": null,
+        "event_text": "Later index assigns the entry to a same-named person born in 1846.",
+        "source_keys": [
+          "index"
+        ]
+      }
+    ],
+    "associates": [
+      {
+        "name": "Fen Dapple (invented)",
+        "relationship": "workshop registrar",
+        "source_keys": [
+          "register"
+        ],
+        "note": "Signature links the register pages, not a claimed relative."
+      }
+    ],
+    "searches": [
+      {
+        "key": "facing-page",
+        "repository": "Fictional Larkhaven Workshop Library",
+        "collection": "Invented workshop admissions",
+        "target": "Read the full facing page",
+        "locator": "C:24 and facing page",
+        "url": null,
+        "required_action": "none",
+        "expected_value": "Compare age, mother and workshop number to distinguish the two invented people.",
+        "destination_path": "data/private/facing-page.txt",
+        "status": "planned",
+        "result_summary": null
+      },
+      {
+        "key": "school-index",
+        "repository": "Fictional Larkhaven Workshop Library",
+        "collection": "Invented workshop admissions",
+        "target": "School index for workshop number",
+        "locator": "C:24 and facing page",
+        "url": null,
+        "required_action": "none",
+        "expected_value": "Compare age, mother and workshop number to distinguish the two invented people.",
+        "destination_path": "data/private/school-index.txt",
+        "status": "no_relevant_result",
+        "result_summary": "Invented index checked completely; no matching entry. This does not prove the person was absent."
+      },
+      {
+        "key": "restricted-volume",
+        "repository": "Fictional Larkhaven Workshop Library",
+        "collection": "Invented workshop admissions",
+        "target": "Restricted duplicate volume",
+        "locator": "C:24 and facing page",
+        "url": null,
+        "required_action": "sign_in",
+        "expected_value": "Compare age, mother and workshop number to distinguish the two invented people.",
+        "destination_path": "data/private/restricted-volume.txt",
+        "status": "blocked",
+        "result_summary": "Example access boundary only. No real account, archive, request or payment exists."
+      }
+    ],
+    "hypotheses": [
+      {
+        "key": "older-ari",
+        "statement": "The 1847 apprentice is Ari born in 1830.",
+        "rank": 1,
+        "status": "active",
+        "evidence": [
+          {
+            "source_key": "register",
+            "direction": "supports",
+            "weight": "high",
+            "rationale": "Stated age and mother align in the invented text."
+          },
+          {
+            "source_key": "index",
+            "direction": "conflicts",
+            "weight": "low",
+            "rationale": "The later index assigns the entry to the other Ari."
+          }
+        ]
+      },
+      {
+        "key": "younger-ari",
+        "statement": "The 1847 apprentice is Ari born in 1846.",
+        "rank": 2,
+        "status": "rejected",
+        "evidence": [
+          {
+            "source_key": "register",
+            "direction": "conflicts",
+            "weight": "high",
+            "rationale": "An infant cannot be the seventeen-year-old described in this fictional entry."
+          }
+        ]
+      }
+    ]
+  }
+}

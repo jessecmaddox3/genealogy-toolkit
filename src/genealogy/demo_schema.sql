@@ -1,0 +1,125 @@
+-- Synthetic schema for the offline demo, containing no records.
+
+CREATE TABLE PersonTable (
+    PersonID INTEGER PRIMARY KEY,
+    Sex INTEGER NOT NULL,
+    Living INTEGER NOT NULL,
+    IsPrivate INTEGER NOT NULL,
+    ParentID INTEGER NOT NULL,
+    Note TEXT NOT NULL
+);
+CREATE TABLE NameTable (
+    NameID INTEGER PRIMARY KEY,
+    OwnerID INTEGER NOT NULL,
+    Surname TEXT NOT NULL,
+    Given TEXT NOT NULL,
+    Prefix TEXT NOT NULL,
+    Suffix TEXT NOT NULL,
+    Nickname TEXT NOT NULL,
+    NameType INTEGER NOT NULL,
+    Date TEXT NOT NULL,
+    SortDate INTEGER NOT NULL,
+    IsPrimary INTEGER NOT NULL,
+    IsPrivate INTEGER NOT NULL,
+    Proof INTEGER NOT NULL,
+    Sentence TEXT NOT NULL,
+    Note TEXT NOT NULL,
+    BirthYear INTEGER NOT NULL,
+    DeathYear INTEGER NOT NULL,
+    Display TEXT NOT NULL,
+    Language TEXT NOT NULL,
+    UTCModDate REAL NOT NULL,
+    SurnameMP TEXT NOT NULL,
+    GivenMP TEXT NOT NULL,
+    NicknameMP TEXT NOT NULL
+);
+CREATE TABLE FamilyTable (
+    FamilyID INTEGER PRIMARY KEY,
+    FatherID INTEGER NOT NULL,
+    MotherID INTEGER NOT NULL,
+    ChildID INTEGER NOT NULL,
+    HusbOrder INTEGER NOT NULL,
+    WifeOrder INTEGER NOT NULL,
+    IsPrivate INTEGER NOT NULL,
+    Proof INTEGER NOT NULL,
+    SpouseLabel INTEGER NOT NULL,
+    FatherLabel INTEGER NOT NULL,
+    MotherLabel INTEGER NOT NULL,
+    SpouseLabelStr TEXT NOT NULL,
+    FatherLabelStr TEXT NOT NULL,
+    MotherLabelStr TEXT NOT NULL,
+    Note TEXT NOT NULL,
+    UTCModDate REAL NOT NULL
+);
+CREATE TABLE ChildTable (
+    RecID INTEGER PRIMARY KEY,
+    ChildID INTEGER NOT NULL,
+    FamilyID INTEGER NOT NULL,
+    RelFather INTEGER NOT NULL,
+    RelMother INTEGER NOT NULL,
+    ChildOrder INTEGER NOT NULL,
+    IsPrivate INTEGER NOT NULL,
+    ProofFather INTEGER NOT NULL,
+    ProofMother INTEGER NOT NULL,
+    Note TEXT NOT NULL,
+    UTCModDate REAL NOT NULL
+);
+CREATE TABLE EventTable (
+    EventID INTEGER PRIMARY KEY,
+    EventType INTEGER NOT NULL,
+    OwnerType INTEGER NOT NULL,
+    OwnerID INTEGER NOT NULL,
+    FamilyID INTEGER NOT NULL,
+    PlaceID INTEGER NOT NULL,
+    Date TEXT NOT NULL,
+    SortDate INTEGER NOT NULL,
+    IsPrimary INTEGER NOT NULL,
+    IsPrivate INTEGER NOT NULL,
+    Proof INTEGER NOT NULL,
+    Status INTEGER NOT NULL,
+    Sentence TEXT NOT NULL,
+    Details TEXT NOT NULL,
+    Note TEXT NOT NULL,
+    UTCModDate REAL NOT NULL
+);
+CREATE TABLE FactTypeTable (
+    FactTypeID INTEGER PRIMARY KEY,
+    OwnerType INTEGER NOT NULL,
+    Name TEXT NOT NULL,
+    Abbrev TEXT NOT NULL,
+    GedcomTag TEXT NOT NULL,
+    UseValue INTEGER NOT NULL,
+    UseDate INTEGER NOT NULL,
+    UsePlace INTEGER NOT NULL,
+    Sentence TEXT NOT NULL,
+    Flags INTEGER NOT NULL,
+    UTCModDate REAL NOT NULL
+);
+CREATE TABLE PlaceTable (
+    PlaceID INTEGER PRIMARY KEY,
+    PlaceType INTEGER NOT NULL,
+    Name TEXT NOT NULL,
+    Abbrev TEXT NOT NULL,
+    Normalized TEXT NOT NULL,
+    Latitude TEXT NOT NULL,
+    Longitude TEXT NOT NULL,
+    LatLongExact INTEGER NOT NULL,
+    MasterID INTEGER NOT NULL,
+    Note TEXT NOT NULL,
+    Reverse INTEGER NOT NULL,
+    fsID TEXT NOT NULL,
+    anID TEXT NOT NULL,
+    UTCModDate REAL NOT NULL
+);
+CREATE TABLE FamilySearchTable (
+    LinkID INTEGER PRIMARY KEY,
+    LinkType INTEGER NOT NULL,
+    rmID INTEGER NOT NULL,
+    fsID TEXT NOT NULL,
+    Modified INTEGER NOT NULL,
+    fsVersion TEXT NOT NULL,
+    fsDate TEXT NOT NULL,
+    Status INTEGER NOT NULL,
+    UTCModDate REAL NOT NULL,
+    TreeID INTEGER NOT NULL
+);

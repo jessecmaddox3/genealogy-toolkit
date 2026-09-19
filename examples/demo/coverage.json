@@ -1,0 +1,144 @@
+{
+  "anomalies": {
+    "duplicate_external_id": 0,
+    "quarantined_relationship_edge": 0,
+    "unparsed_date": 0
+  },
+  "cohort": "A",
+  "evidence_floor": "accepted_working",
+  "metrics": [
+    {
+      "cohort": "A",
+      "eligible": 2,
+      "evidence_floor": "accepted_working",
+      "included": 2,
+      "name": "accepted_parent_edges",
+      "unit": "parent_edges",
+      "unknown": 0
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 3,
+      "name": "birth_date",
+      "unit": "people",
+      "unknown": 0
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 1,
+      "name": "citations",
+      "unit": "people",
+      "unknown": 2
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 0,
+      "name": "death_date",
+      "unit": "people",
+      "unknown": 3
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 0,
+      "name": "familysearch_id",
+      "unit": "people",
+      "unknown": 3
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 3,
+      "name": "known_child_sets",
+      "unit": "people",
+      "unknown": 0
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 0,
+      "name": "notes",
+      "unit": "people",
+      "unknown": 3
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 3,
+      "name": "people",
+      "unit": "people",
+      "unknown": 0
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 3,
+      "name": "primary_names",
+      "unit": "people",
+      "unknown": 0
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 3,
+      "name": "raw_places",
+      "unit": "people",
+      "unknown": 0
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 0,
+      "name": "recorded_lifespan",
+      "unit": "people",
+      "unknown": 3
+    },
+    {
+      "cohort": "A",
+      "eligible": 3,
+      "evidence_floor": "accepted_working",
+      "included": 0,
+      "name": "resolved_coordinates",
+      "unit": "people",
+      "unknown": 3
+    }
+  ],
+  "snapshot_acquisitions": [
+    {
+      "child_links": 3,
+      "events": 10,
+      "families": 3,
+      "people": 8,
+      "places": 1,
+      "snapshot_id": "synthetic-larkhaven-v1"
+    }
+  ],
+  "summary": {
+    "anomaly_type_count": 3,
+    "coverage_units": {
+      "parent_edges": {
+        "eligible": 2,
+        "metric_count": 1
+      },
+      "people": {
+        "eligible": 3,
+        "metric_count": 11
+      }
+    },
+    "eligible_people": 3,
+    "metric_count": 12
+  }
+}

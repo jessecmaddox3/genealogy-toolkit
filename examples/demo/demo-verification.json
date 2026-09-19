@@ -1,0 +1,11 @@
+{
+  "all_content": "Wholly invented, including people, places, graph, chronology, aggregate counts and mock sources.",
+  "canonical_people": 10,
+  "changed_manifest_rejected": true,
+  "familysearch_ids": 0,
+  "network_requests": 0,
+  "note": "Canonical UUIDs and local timestamps are newly generated per run; the fixture and semantic results are fixed.",
+  "raw_snapshot_replay_no_changes": true,
+  "research_replay_no_changes": true,
+  "rootsmagic_people": 8
+}

@@ -1,0 +1,45 @@
+name: Verify Evidence-first Genealogy
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.12'
+          - os: ubuntu-latest
+            python: '3.14'
+          - os: windows-latest
+            python: '3.13'
+          - os: macos-latest
+            python: '3.13'
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+      - run: python start_demo.py --no-open
+      - if: runner.os == 'Windows'
+        shell: cmd
+        run: call "Start Demo.bat" --no-open
+      - if: runner.os == 'macOS'
+        run: sh "Start Demo.command" --no-open
+  browser-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements-build.txt playwright==1.58.0
+      - run: python -m playwright install --with-deps chromium
+      - run: python scripts/test-browser.py
+      - run: python scripts/build-release.py
+      - run: python -m venv /tmp/genealogy-wheel
+      - run: /tmp/genealogy-wheel/bin/pip install --no-deps artifacts/release/*.whl
+      - run: cd /tmp && /tmp/genealogy-wheel/bin/genealogy demo --output genealogy-installed-demo

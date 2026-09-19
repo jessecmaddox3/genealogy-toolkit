@@ -1,0 +1,229 @@
+{
+  "created_at": "2026-09-19 12:44:51",
+  "current_conclusion": {
+    "associates": [
+      {
+        "name": "Fen Dapple (invented)",
+        "note": "Signature links the register pages, not a claimed relative.",
+        "relationship": "workshop registrar",
+        "source_keys": [
+          "register"
+        ]
+      }
+    ],
+    "hypotheses": [
+      {
+        "evidence": [
+          {
+            "direction": "supports",
+            "rationale": "Stated age and mother align in the invented text.",
+            "source_key": "register",
+            "weight": "high"
+          },
+          {
+            "direction": "conflicts",
+            "rationale": "The later index assigns the entry to the other Ari.",
+            "source_key": "index",
+            "weight": "low"
+          }
+        ],
+        "key": "older-ari",
+        "rank": 1,
+        "statement": "The 1847 apprentice is Ari born in 1830.",
+        "status": "active"
+      },
+      {
+        "evidence": [
+          {
+            "direction": "conflicts",
+            "rationale": "An infant cannot be the seventeen-year-old described in this fictional entry.",
+            "source_key": "register",
+            "weight": "high"
+          }
+        ],
+        "key": "younger-ari",
+        "rank": 2,
+        "statement": "The 1847 apprentice is Ari born in 1846.",
+        "status": "rejected"
+      }
+    ],
+    "line_anchor": [
+      {
+        "basis": "Invented workshop register",
+        "confidence": "accepted_working",
+        "note": "Identity is provisional; exact matching never merges people by name alone.",
+        "person_id": "5505f48c-58a0-494d-bcb2-a59a971afdea",
+        "person_key": "ari-1830"
+      }
+    ],
+    "summary": "The older Ari fits the register age and named mother. The later index conflates two people; inspect the facing page before treating the identification as settled.",
+    "timeline": [
+      {
+        "date_text": "1830",
+        "event_text": "Older Ari reportedly born; year only.",
+        "place_text": "Larkhaven (invented)",
+        "source_keys": [
+          "register"
+        ]
+      },
+      {
+        "date_text": "April to May 1847",
+        "event_text": "Workshop admits an apprentice named Ari Fable, aged seventeen.",
+        "place_text": "Larkhaven (invented)",
+        "source_keys": [
+          "register"
+        ]
+      },
+      {
+        "date_text": "1892",
+        "event_text": "Later index assigns the entry to a same-named person born in 1846.",
+        "place_text": null,
+        "source_keys": [
+          "index"
+        ]
+      }
+    ]
+  },
+  "negative_results": [
+    {
+      "collection": "Invented workshop admissions",
+      "destination_path": "data/private/school-index.txt",
+      "expected_value": "Compare age, mother and workshop number to distinguish the two invented people.",
+      "key": "school-index",
+      "locator": "C:24 and facing page",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "required_action": "none",
+      "result_summary": "Invented index checked completely; no matching entry. This does not prove the person was absent.",
+      "status": "no_relevant_result",
+      "target": "School index for workshop number",
+      "url": null
+    }
+  ],
+  "planned_searches": [
+    {
+      "collection": "Invented workshop admissions",
+      "destination_path": "data/private/facing-page.txt",
+      "expected_value": "Compare age, mother and workshop number to distinguish the two invented people.",
+      "key": "facing-page",
+      "locator": "C:24 and facing page",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "required_action": "none",
+      "result_summary": null,
+      "status": "planned",
+      "target": "Read the full facing page",
+      "url": null
+    },
+    {
+      "collection": "Invented workshop admissions",
+      "destination_path": "data/private/restricted-volume.txt",
+      "expected_value": "Compare age, mother and workshop number to distinguish the two invented people.",
+      "key": "restricted-volume",
+      "locator": "C:24 and facing page",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "required_action": "sign_in",
+      "result_summary": "Example access boundary only. No real account, archive, request or payment exists.",
+      "status": "blocked",
+      "target": "Restricted duplicate volume",
+      "url": null
+    }
+  ],
+  "research_question_id": 1,
+  "sources": [
+    {
+      "accessed_at": "2037-04-09",
+      "citation_text": "MOCK: workshop register, spring 1847 (wholly invented teaching document), C:24.",
+      "collection_name": "Invented training collection",
+      "evidence_tier": "original_record",
+      "files": [
+        {
+          "local_path": "mock-sources/workshop.txt",
+          "ocr_status": "not_applicable",
+          "original_filename": "workshop.txt",
+          "rights_label": "public_domain",
+          "sha256": "11087fc66ffc74b6fdae20fcb8705093bdcee5e7c5d3ae4757c7e3f22eb52c82",
+          "size_bytes": 155,
+          "source_file_id": 1,
+          "transcription_status": "complete"
+        }
+      ],
+      "jurisdiction": "Mistvale, Fictional Republic",
+      "page": "24",
+      "record_title": "MOCK: workshop register, spring 1847",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "snapshot_id": "research-batch-larkhaven-workshop-demo-v1",
+      "source_id": 3,
+      "source_key": "register",
+      "source_type": "teaching_mock",
+      "url": null,
+      "volume": "C"
+    },
+    {
+      "accessed_at": "2037-04-09",
+      "citation_text": "MOCK: later alphabetical index (wholly invented teaching document), C:24.",
+      "collection_name": "Invented training collection",
+      "evidence_tier": "derivative_record",
+      "files": [
+        {
+          "local_path": "mock-sources/index.txt",
+          "ocr_status": "not_applicable",
+          "original_filename": "index.txt",
+          "rights_label": "public_domain",
+          "sha256": "d1bbed8ea5e68676638bd3303cfcfb0e6fea68c106fcf92ea39311c74785c866",
+          "size_bytes": 154,
+          "source_file_id": 2,
+          "transcription_status": "complete"
+        }
+      ],
+      "jurisdiction": "Mistvale, Fictional Republic",
+      "page": "24",
+      "record_title": "MOCK: later alphabetical index",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "snapshot_id": "research-batch-larkhaven-workshop-demo-v1",
+      "source_id": 4,
+      "source_key": "index",
+      "source_type": "teaching_mock",
+      "url": null,
+      "volume": "C"
+    },
+    {
+      "accessed_at": "2037-04-09",
+      "citation_text": "MOCK: community recollection (wholly invented teaching document), C:24.",
+      "collection_name": "Invented training collection",
+      "evidence_tier": "authored_narrative",
+      "files": [
+        {
+          "local_path": "data/private/mock-recollection.txt",
+          "ocr_status": "not_applicable",
+          "original_filename": "mock-recollection.txt",
+          "rights_label": "restricted",
+          "sha256": "ec260b90fa42e99a53f9ac90205ff46a482073a922aa876203c61e6d282164c0",
+          "size_bytes": 163,
+          "source_file_id": 3,
+          "transcription_status": "complete"
+        }
+      ],
+      "jurisdiction": "Mistvale, Fictional Republic",
+      "page": "24",
+      "record_title": "MOCK: community recollection",
+      "repository": "Fictional Larkhaven Workshop Library",
+      "snapshot_id": "research-batch-larkhaven-workshop-demo-v1",
+      "source_id": 5,
+      "source_key": "story",
+      "source_type": "teaching_mock",
+      "url": null,
+      "volume": "C"
+    }
+  ],
+  "status": "in_progress",
+  "target_people": [
+    "5505f48c-58a0-494d-bcb2-a59a971afdea",
+    "00879471-cf2d-488d-9ece-6033df5adb3a"
+  ],
+  "target_relationships": [
+    11,
+    12
+  ],
+  "title": "Which Ari Fable appears in the Larkhaven workshop register?",
+  "updated_at": "2026-09-19 12:44:51",
+  "working_confidence": null
+}
